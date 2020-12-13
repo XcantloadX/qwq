@@ -1,0 +1,9 @@
+body{
+	word-break: break-word; /*超出屏幕的文字自动换行*/
+}
+
+.icon{
+	width: 16px;
+	height: 16px;
+	padding-right: 3px;
+}

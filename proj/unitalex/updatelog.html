@@ -1,70 +1,49 @@
-<!DOCTYPE html []>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="MarkdownViewer++" />
-    <meta name='robots' content='noindex,nofollow' />
-    <title>HIDDEN</title>
-    <style type="text/css">
-            
-/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
-td, h1, h2, h3, h4, h5, p, ul, ol, li {
-    page-break-inside: avoid; 
-}
-
-        </style>
-  </head>
-  <body>
-    <h2 id="beta-0.1.1-2020.8.25">beta 0.1.1 (2020.8.25)</h2>
-    <p>更新：</p>
-    <ul>
-      <li>加强 Mod 自动安装功能，<strong>现在可以直接选择 zip 文件安装</strong>（尚不支持 rar）</li>
-      <li>内置游戏键盘加入按键反馈</li>
-      <li>隐藏键盘按钮现在更容易点到了（16x16 -&gt; 40x40）</li>
-      <li>开始界面修改为中文</li>
-      <li>GameOver 界面不需要再按一下确认键</li>
-      <li>新的 LuaError 界面</li>
-      <li>重写 Mod 选择界面和游戏键盘</li>
-      <li>修复上一版的三个 bug</li>
-      <li>修复关闭内置游戏键盘后不能使用外置键盘控制</li>
-    </ul>
-    <p>已知 Bug:</p>
-    <ul>
-      <li>由于使用了 NativeFileSO，如果修改包名来共存的话，安装时会报 INSTALL_FAILED_CONFLICTING_PROVIDER 错误，有待解决</li>
-      <li>
-        <strong>游戏键盘的 Z 键有一定几率按下但没反应</strong>，只在手机上有，尚未进行完全的测试</li>
-      <li>
-        <strong>选择要安装的 Mod 时，有一定几率会被杀后台，游戏重启</strong>
-      </li>
-    </ul>
-    <p>注意：<br />
+<h2 id="beta-0.1.2-2020.10.">beta 0.1.2 (尚未发布)</h2>
+<p>Bugs:</p>
+<ul>
+<li>修复 GameOver 界面布局问题</li>
+<li>修复 Lua 脚本中 Input Object 失效（如黄心不能发射子弹）</li>
+<li>修复隐藏游戏键盘后实体键盘失效</li>
+<li>修复战斗胜利后无法返回的 bug</li>
+</ul>
+<p>新增:</p>
+<ul>
+<li>调试屏幕</li>
+</ul>
+<h2 id="beta-0.1.1-2020.8.25">beta 0.1.1 (2020.8.25)</h2>
+<p>Bugs:</p>
+<ul>
+<li>修复上一版的三个 bug</li>
+<li>修复关闭内置游戏键盘后不能使用外置键盘控制</li>
+</ul>
+<p>新增:</p>
+<ul>
+<li>加强 Mod 自动安装功能，<strong>现在可以直接选择 zip 文件安装</strong>（尚不支持 rar）</li>
+<li>内置游戏键盘加入按键反馈</li>
+<li>隐藏键盘按钮现在更容易点到了（16x16 -&gt; 40x40）</li>
+<li>开始界面修改为中文</li>
+<li>GameOver 界面不需要再按一下确认键</li>
+<li>新的 LuaError 界面</li>
+<li>重写 Mod 选择界面和游戏键盘</li>
+</ul>
+<p>注意：<br />
 最低支持的 Android 版本由 4.1 升到了 4.4（2020 了应该没人用这么旧的版本吧）</p>
-    <h2 id="beta-0.1.0-2020.8.20">beta 0.1.0 (2020.8.20)</h2>
-    <p>更新：</p>
-    <ul>
-      <li>新增 fps 显示（点击可以关闭）</li>
-      <li>新的开始界面（尚未完全完成）</li>
-      <li>新增 Mod 自动安装功能，可自动解压 zip 文件并安装（但仍需手动输入 zip 文件路径）</li>
-      <li>内置简单的游戏键盘（目前点击屏幕右下角可以关闭）</li>
-      <li>
-        <strong>修复分辨率导致的画面模糊问题</strong>（现在游戏画面不会强制铺满屏幕）</li>
-      <li>现在在开始界面双击返回键可以退出游戏了</li>
-    </ul>
-    <p>已知 Bug：</p>
-    <ul>
-      <li>
-        <del>Mod 选择界面 UI 过小</del> (beta 0.1.1 修复)</li>
-      <li>
-        <del>Mod 路径不显示</del> (beta 0.1.1 已移除该特性)</li>
-      <li>
-        <strong>部分 Mod 布局错乱，目前原因不明</strong>
-      </li>
-      <li>有时自动安装提示错误，但有可能实际上成功</li>
-      <li>
-        <del>GameOver 界面没有键盘</del> (beta 0.1.1 修复)</li>
-    </ul>
-    <p>注意：<br /><strong>此版本可与上一版本共存，但 Mod 不通用<br />
+<h2 id="beta-0.1.0-2020.8.20">beta 0.1.0 (2020.8.20)</h2>
+<p>Bugs:<br />
+* <strong>修复分辨率导致的画面模糊问题</strong>（现在游戏画面不会强制铺满屏幕）</p>
+<p>更新:</p>
+<ul>
+<li>新增 fps 显示（点击可以关闭）<br />
+</li>
+<li>新的开始界面（尚未完全完成）<br />
+</li>
+<li>新增 Mod 自动安装功能，可自动解压 zip 文件并安装（但仍需手动输入 zip 文件路径）<br />
+</li>
+<li>内置简单的游戏键盘（目前点击屏幕右下角可以关闭）<br />
+</li>
+<li>现在在开始界面双击返回键可以退出游戏了</li>
+</ul>
+<p>注意：<br />
+<strong>此版本可与上一版本共存，但 Mod 不通用<br />
 此版尚不稳定，不建议卸载旧版</strong><br />
 Mod 文件路径变为：<code>Android/data/com.xcantloadx.unitale/Files/Mod</code></p>
-  </body>
-</html>
