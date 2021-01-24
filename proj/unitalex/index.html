@@ -1,40 +1,59 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
+    
     <head>
         <title>UnitaleX (Unitale Android 版)</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
-        <style>
-            .md {
-            	border: none;
-            	width: 100%;
-            }
-			
-
-        </style>
-		<link rel="stylesheet" href="/static/css/next.css" />
-		<link rel="stylesheet" href="/static/css/global.css" />
-        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+        <style>.md { border: none; width: 100%; }</style>
+        <!--第三方依赖-->
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <!--第三方依赖-->
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/static/css/global.css" />
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script></head>
+    
     <body>
-        <h1>下载地址</h1>
-        <a href="https://pan.baidu.com/s/1C7KIVNMmGIpdcNcHVSyLQQ" target="_blank">百度网盘</a> <span>（提取码 yn8n）</span>
-        <hr/>
-        <h1>已知 Bug</h1>
-		<div id="bugs" class="md"></div>
-		<hr/>
-        <h1>更新日志</h1>
-		<a href="http://www.bilibili.com/video/BV16C4y1t7By/" target="_blank"><img src="http://www.bilibili.com/favicon.ico" class="icon"></img>Bilibili 视频</a>
-        <div id="logs" class="md"></div>
-
-		
-		<script>
-            $.get("updatelog.html", function(data, status){
-            	$("#logs").html(data);
-            });
-			
-            $.get("bugs.html", function(data, status){
-            	$("#bugs").html(data);
-            });
-        </script>
-		
+        <!--导航栏-->
+        <ul class="breadcrumb">
+            <li><a href="/proj">项目</a></li>
+            <li>UnitaleX</li>
+        </ul>
+        
+        <div class="container">
+            <h1>UnitaleX</h1>
+            <hr/>
+            <p>UnitaleX 是基于 Github@lvz 的 Unitale 修改而来的 Undertale Modding 引擎</p>
+            <p>此版本相对于 CYF 更注重玩家的使用体验（至少我目前是这么打算的）</p>
+            
+            <h2>下载地址</h2>
+            <a href="https://pan.baidu.com/s/1C7KIVNMmGIpdcNcHVSyLQQ" target="_blank">百度网盘</a>
+            <span>（提取码 yn8n）</span>
+            
+            <h2>更新日志</h2>            
+            <div style="position: relative; padding: 30% 45%;">
+                <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=796852122&bvid=BV16C4y1t7By&cid=228657723&page=1" frameborder="no" scrolling="no"></iframe>
+            </div>
+            <br/>
+            <div id="logs" class="md">
+                <script>
+                    $.get("updatelog.html", function(data, status) {
+                        $("#logs").html(data);
+                    });
+    
+                    $.get("bugs.html", function(data, status) {
+                        $("#bugs").html(data);
+                    });
+                </script>
+            
+            </div>
+            
+            
+        </div>
+        
     </body>
+
 </html>
