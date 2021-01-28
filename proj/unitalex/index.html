@@ -1,59 +1,117 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html>
-    
-    <head>
-        <title>UnitaleX (Unitale Android 版)</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-        <style>.md { border: none; width: 100%; }</style>
-        <!--第三方依赖-->
-        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                <!--第三方依赖-->
-        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/static/css/global.css" />
-        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script></head>
-    
-    <body>
-        <!--导航栏-->
-        <ul class="breadcrumb">
-            <li><a href="/proj">项目</a></li>
-            <li>UnitaleX</li>
-        </ul>
-        
-        <div class="container">
-            <h1>UnitaleX</h1>
-            <hr/>
-            <p>UnitaleX 是基于 Github@lvz 的 Unitale 修改而来的 Undertale Modding 引擎</p>
-            <p>此版本相对于 CYF 更注重玩家的使用体验（至少我目前是这么打算的）</p>
-            
-            <h2>下载地址</h2>
-            <a href="https://pan.baidu.com/s/1C7KIVNMmGIpdcNcHVSyLQQ" target="_blank">百度网盘</a>
-            <span>（提取码 yn8n）</span>
-            
-            <h2>更新日志</h2>            
-            <div style="position: relative; padding: 30% 45%;">
-                <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=796852122&bvid=BV16C4y1t7By&cid=228657723&page=1" frameborder="no" scrolling="no"></iframe>
-            </div>
-            <br/>
-            <div id="logs" class="md">
-                <script>
-                    $.get("updatelog.html", function(data, status) {
-                        $("#logs").html(data);
-                    });
-    
-                    $.get("bugs.html", function(data, status) {
-                        $("#bugs").html(data);
-                    });
-                </script>
-            
-            </div>
-            
-            
-        </div>
-        
-    </body>
+	<!doctype html>
 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+
+	<title>UnitaleX - 为 Android 移植的 Unitale</title>
+	
+    <!--第三方依赖-->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="/static/css/global.css" />
+</head>
+	
+	<body>
+	    <!--导航栏-->
+        <ul class="breadcrumb">
+			
+            <li><a href="/proj">项目</a></li>
+			
+			
+			
+            <li>UnitaleX</li>
+			
+        </ul>
+		
+		<div class="container">
+			<h1 id="unitalex">UnitaleX</h1>
+<hr />
+<p>UnitaleX 是基于 Github @lvz 的 <a href="https://github.com/lvk/Unitale">Unitale</a> 修改而来的 Undertale Modding 引擎<br />
+与 CYF 不同的是，此版本更注重玩家的使用体验（至少我目前是这么打算的）</p>
+
+<h2 id="下载地址">下载地址</h2>
+<p><a href="https://pan.baidu.com/s/1C7KIVNMmGIpdcNcHVSyLQQ">百度网盘</a> （提取码 yn8n）</p>
+
+<h2 id="更新日志视频">更新日志（视频）</h2>
+<div style="position: relative; padding: 30% 45%;">
+    <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=796852122&amp;bvid=BV16C4y1t7By&amp;cid=228657723&amp;page=2" frameborder="no" scrolling="no"></iframe>
+</div>
+
+<h2 id="更新日志">更新日志</h2>
+
+<h3 id="beta-020-2021124">beta 0.2.0 (2021.1.24)</h3>
+<h5 id="新增">新增</h5>
+<ul>
+  <li><strong>游戏暂停屏幕，你可以不用退出就直接重新开始了！</strong></li>
+  <li>加入对字体中重复字符的检测，现在不会报错了</li>
+</ul>
+
+<h5 id="修改">修改</h5>
+
+<ul>
+  <li>修复 GameOver 界面布局问题</li>
+  <li>修复 Lua 中 Input Object 失效（表现为黄心不能发射子弹）</li>
+  <li>修复隐藏内置键盘后 Z 键失灵（表现为自动弹出内置键盘）</li>
+  <li>修复低帧率下按键不能释放（表现为松开之后一直按下某个键）</li>
+  <li>修复战斗胜利后无法返回的 bug</li>
+  <li><strong>GameOver 后自动重新开始，避免每次重新加载都要耗很长时间</strong>（之后的版本会加入可选择是否重新开始）</li>
+  <li>分离游戏键盘的贴图到 Default/UI/Controls 目录下，现在你可以自行修改贴图了！</li>
+</ul>
+
+<h5 id="注意">注意</h5>
+<p>由于域名尚未备案，所以对象储存暂时用不了，暂时没法自动更新，<strong>你需要手动下载 default_0.1.2.zip 并解压到 <code class="language-plaintext highlighter-rouge">Android/data/com.xcantloadx.unitale/Files/</code> 下覆盖 <code class="language-plaintext highlighter-rouge">Default</code> 文件夹</strong></p>
+
+<h3 id="beta-011-2020825">beta 0.1.1 (2020.8.25)</h3>
+<h5 id="新增-1">新增</h5>
+
+<ul>
+  <li>加强 Mod 自动安装功能，<strong>现在可以直接选择 zip 文件安装</strong>（尚不支持 rar）</li>
+  <li>内置键盘加入按键反馈</li>
+  <li>隐藏键盘按钮现在更容易点到了（16x16 -&gt; 40x40）</li>
+  <li>开始界面修改为中文</li>
+  <li>GameOver 界面不需要再多按一下确认键</li>
+  <li>新的 LuaError 界面</li>
+  <li>重写 Mod 选择界面和内置键盘</li>
+</ul>
+
+<h5 id="修改-1">修改</h5>
+
+<ul>
+  <li>修复上一版的三个 bug</li>
+  <li>修复关闭内置键盘后不能使用外置键盘控制</li>
+</ul>
+
+<h5 id="注意-1">注意</h5>
+<p>最低支持的 Android 版本由 4.1 升到了 4.4（2020 了应该没人用这么旧的版本吧）</p>
+
+<h3 id="beta-010-2020820">beta 0.1.0 (2020.8.20)</h3>
+<h5 id="新增-2">新增</h5>
+
+<ul>
+  <li>新增 fps 显示（点击可以关闭）</li>
+  <li>新的开始界面（尚未完全完成）</li>
+  <li>新增 Mod 自动安装功能，可自动解压 zip 文件并安装（但仍需手动输入 zip 文件路径）</li>
+  <li>内置简单的游戏键盘（目前点击屏幕右下角可以关闭）</li>
+  <li>现在在开始界面双击返回键可以退出游戏了</li>
+</ul>
+
+<h5 id="修改-2">修改</h5>
+
+<ul>
+  <li><strong>修复分辨率导致的画面模糊问题</strong>（现在游戏画面不会强制铺满屏幕）</li>
+</ul>
+
+<h5 id="注意-2">注意</h5>
+<p><strong>此版本可与上一版本共存，但 Mod 路径不通用<br />
+此版尚不稳定，不建议卸载旧版</strong><br />
+Mod 文件路径变为（Android 平台）：<code class="language-plaintext highlighter-rouge">Android/data/com.xcantloadx.unitale/Files/Mod</code></p>
+
+
+		</div>
+	</body>
 </html>
